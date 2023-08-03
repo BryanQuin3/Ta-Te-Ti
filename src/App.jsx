@@ -55,37 +55,47 @@ function App() {
     }
   }
   return (
-    <main className='board'>
-      <h1>Ta-Te-Ti</h1>
-      <button onClick={resetGame}>Reset</button>
-      <section className='game'>
-        {
-          board.map((square,index)=>{
-            return(
-              <Square 
-                key={index}
-                index={index}
-                updateBoard={updateBoard}
-              >
-                {square}
-              </Square>
-            )
-          })
-        }
-      </section>
-      <section className="turn">
-        <Square isSelected = {turn === TURNS.X}>
-          {TURNS.X}
-        </Square>
-        <Square isSelected = {turn === TURNS.O}>
-          {TURNS.O}
-        </Square>
-      </section>
-      <WinnerModal 
-        resetGame={resetGame}
-        winner={winner}
-      >
-      </WinnerModal>
+    <main className='hero'>
+      <img className='person' src="Main.png" alt="" />
+      <header className='header'>
+       <img className='logo' src="/logo.png" alt="" />
+       <button onClick={resetGame} className='play'>
+          <img src="/play.png" alt="" />
+          Play
+       </button>
+      </header>
+      <article className='container'>
+        <section className='board'>
+          <section className='game'>
+            {
+              board.map((square,index)=>{
+                return(
+                  <Square 
+                    key={index}
+                    index={index}
+                    updateBoard={updateBoard}
+                  >
+                    {square}
+                  </Square>
+                )
+              })
+            }
+          </section>
+          <WinnerModal 
+            resetGame={resetGame}
+            winner={winner}
+          >
+          </WinnerModal>
+        </section>
+        <section className="turn">
+          <Square isSelected = {turn === TURNS.X}>
+            <img src="/x.svg" alt="" />
+          </Square>
+          <Square isSelected = {turn === TURNS.O}>
+            <img  src="/o.svg" alt="" />
+          </Square>
+        </section>
+      </article>
     </main>
   )
 }
