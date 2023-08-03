@@ -1,8 +1,20 @@
-# React + Vite
+# 🎮 Juego Ta-Te-Ti (Tres en línea) con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido al Juego Ta-Te-Ti desarrollado con React! 
 
-Currently, two official plugins are available:
+Este es un proyecto que te permite disfrutar del clásico juego ta-te-ti en tu navegador. Experimenta la emoción de este juego de estrategia mientras compites contra la inteligencia artificial o desafías a tus amigos en partidas multijugador de manera local.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Características destacadas:
+- 🎨 Interfaz de usuario intuitiva y atractiva, optimizada para una experiencia de juego fluida.
+- 🤖 Opciones para jugar contra una inteligencia artificial con diferentes niveles de dificultad.
+- 👥 Modo multijugador para desafiar a tus amigos y demostrar tus habilidades ta-te-ti.
+
+## Cómo jugar
+
+1. Clona este repositorio a tu máquina local.
+2. Abre una terminal en la carpeta raíz del proyecto y ejecuta `npm install` para instalar las dependencias.
+3. Luego, ejecuta `npm start` para iniciar el juego en tu navegador.
+4. Selecciona el nivel de dificultad o elige el modo multijugador para comenzar a jugar.
+5. ¡Diviértete y disfruta de tu partida de ta-te-ti!
+
+
