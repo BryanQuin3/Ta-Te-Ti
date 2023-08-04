@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Square } from './components/Square'
 import { TURNS } from './constants'
 import { checkWinnerFrom,checkEndGame } from './logic/board'
 import { saveGameToStorage,resetGameToStorage } from './logic/storage'
 import { WinnerModal } from './components/WinnerModal'
+import {TurnIndicator} from './components/TurnIndicator'
+import { Header } from'./components/Header'
+import { GameBoard } from './components/GameBoard'
 import confetti from 'canvas-confetti'
 import './App.css'
 
@@ -56,48 +58,17 @@ function App() {
   }
   return (
     <main className='hero'>
-      <img className='person' src="Main.png" alt="" />
-      <header className='header'>
-       <img className='logo' src="/logo.png" alt="" />
-       <button onClick={resetGame} className='play'>
-          <img src="/play.png" alt="" />
-          Play
-       </button>
-      </header>
+      <img className='person' src="Main.png" alt="squid game soldier" />
+      <Header resetGame={resetGame} />
       <article className='container'>
         <section className='board'>
-          <section className='game'>
-            {
-              board.map((square,index)=>{
-                return(
-                  <Square 
-                    key={index}
-                    index={index}
-                    updateBoard={updateBoard}
-                  >
-                    {square}
-                  </Square>
-                )
-              })
-            }
-          </section>
-          <WinnerModal 
-            resetGame={resetGame}
-            winner={winner}
-          >
-          </WinnerModal>
+          <GameBoard board={board} updateBoard={updateBoard} />
+          <WinnerModal resetGame={resetGame} winner={winner} />
         </section>
-        <section className="turn">
-          <Square isSelected = {turn === TURNS.X}>
-            <img src="/x.svg" alt="" />
-          </Square>
-          <Square isSelected = {turn === TURNS.O}>
-            <img  src="/o.svg" alt="" />
-          </Square>
-        </section>
+        <TurnIndicator turn={turn} />
       </article>
     </main>
-  )
+  );
 }
 
 export default App
