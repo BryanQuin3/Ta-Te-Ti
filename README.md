@@ -4,10 +4,8 @@
 
 Este es un proyecto que te permite disfrutar del clásico juego ta-te-ti en tu navegador. Experimenta la emoción de este juego de estrategia mientras compites contra la inteligencia artificial o desafías a tus amigos en partidas multijugador de manera local.
 
-Características destacadas:
-- 🎨 Interfaz de usuario intuitiva y atractiva, optimizada para una experiencia de juego fluida.
-- 🤖 Opciones para jugar contra una inteligencia artificial con diferentes niveles de dificultad.
-- 👥 Modo multijugador para desafiar a tus amigos y demostrar tus habilidades ta-te-ti.
+![UI](ui.png)
+
 
 ## Cómo jugar
 
